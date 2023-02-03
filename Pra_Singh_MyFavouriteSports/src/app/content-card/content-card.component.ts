@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
+/* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -9,7 +9,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit {
   
-  FavouriteSport:Content = {
+  /* FavouriteSport:Content = {
     id:1,
     title:"football",
     description:"football is an outdoor game",
@@ -32,29 +32,29 @@ export class ContentCardComponent implements OnInit {
     creator:"Prabhjeet",
     imgURL:"https://tse2.mm.bing.net/th?id=OIP.s2s2eHdYaHlQQgUYCI3HywHaE6&pid=Api&P=0",
     type:"outdoor"
-  }
+  } */
 
-  MyFavouriteSports = new ContentList(this.FavouriteSport);
+  /* MyFavouriteSports = new ContentList(this.FavouriteSport);
   contentList = this.MyFavouriteSports.getitems();
-
+ */
   
 
   constructor(){
-    this.MyFavouriteSports.addContent(this.FavouriteSport);
+    /* this.MyFavouriteSports.addContent(this.FavouriteSport);
     this.MyFavouriteSports.addContent(this.FavouriteSport2);
-    this.MyFavouriteSports.addContent(this.FavouriteSport3);
+    this.MyFavouriteSports.addContent(this.FavouriteSport3); */
   }
   
   
   
     ngOnInit(): void {
-      const div = document.getElementById('MyFavouriteSports');
+      /* const div = document.getElementById('MyFavouriteSports');
       console.log(div);
       if(div) {
         div.innerHTML += this.MyFavouriteSports.printProperties(0);
         div.innerHTML += this.MyFavouriteSports.printProperties(1);
         div.innerHTML += this.MyFavouriteSports.printProperties(2);
-      }
+      } */
   
     }
   }
