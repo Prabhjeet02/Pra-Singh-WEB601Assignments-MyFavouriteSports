@@ -27,7 +27,7 @@ ngOnInit(): void {
 }
 
 imageText() {
-  console.log("Image Url: " + this.content.imgURL + "Image Title:" + this.content.title);
+  console.log("Image Url: " + this.content.imgURL + " id:" + this.content.id + " Title:" + this.content.title);
 }
 
 }
