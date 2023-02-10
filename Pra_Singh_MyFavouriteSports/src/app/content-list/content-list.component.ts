@@ -7,7 +7,7 @@ import { Content } from '../helper-files/content-interface';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
+export class ContentListComponent implements OnInit {
 
   @Input() content: Content;
   constructor() {
@@ -19,6 +19,17 @@ export class ContentListComponent {
     imgURL:"https://tse4.mm.bing.net/th?id=OIP.PGRMBBL_bdz1Fou6sF4FFgHaFj&pid=Api&P=0",
     type:"outdoor",
     tags:["outdoor", "Game"]
+    },
+    {
+    
+    id:2,
+    title:"Basketball",
+    description:"basketball is an indoor game",
+    creator:"Prabhjeet",
+    imgURL:"https://tse1.mm.bing.net/th?id=OIP.rSRri9OwWZadFuTqS9lVUwHaEK&pid=Api&P=0",
+    type:"indoor",
+    tags:["basketball", "Game"]
+
     };
 }
 ngOnInit(): void {

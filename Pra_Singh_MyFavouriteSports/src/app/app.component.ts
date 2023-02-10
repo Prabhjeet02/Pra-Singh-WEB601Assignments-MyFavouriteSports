@@ -7,7 +7,7 @@ import { Content } from './helper-files/content-interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pra_Singh_MyFavouriteSports';
+  /* title = 'Pra_Singh_MyFavouriteSports';
 
   contentItem:Content = {
     id:1,
@@ -55,17 +55,17 @@ export class AppComponent {
     imgURL:"https://tse1.mm.bing.net/th?id=OIP.rSRri9OwWZadFuTqS9lVUwHaEK&pid=Api&P=0",
     type:"outdoor and indoor",
     tags:["basketball", "Game"]
-  };
+  }; */
  
 
-  contentArray: Content[];
+  //contentArray: Content[];
   constructor(){
-    this.contentArray = [this.contentItem];
+   /*  this.contentArray = [this.contentItem];
    
     this.contentArray.push(this.contentItem2);
     this.contentArray.push(this.contentItem3);
     this.contentArray.push(this.contentItem4);
-    this.contentArray.push(this.contentItem5);
+    this.contentArray.push(this.contentItem5); */
     
   }
 

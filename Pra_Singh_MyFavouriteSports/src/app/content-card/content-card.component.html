@@ -1,2 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 mt-5">
+        <input [(ngModel)]="searchTerm" placeholder="Enter title">
+        <button (click)="search()">Search</button>
+        <div *ngIf="message">
+          <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
+        </div>
+  </div> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  
+    <div class="row">
+      <h2 class="m-5">indoor</h2>
+      <app-content-list class="col-md-4  mt-5 mx-1 card bg-success text-white" *ngFor="let item of contentArray | contentFilter:'indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-list>
+    </div>
+  
+    <div class="row">
+      <h2 class="m-5">outdoor</h2>
+      <app-content-list class="col-md-4  mt-5 mx-1 card bg-dark text-light" *ngFor="let item of contentArray | contentFilter:'outdoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-list>
+    </div>
 
-<div id="MyFavouriteSports"></div>
+    <div class="row">
+      <h2 class="m-5">outdoor and indoor</h2>
+      <app-content-list class="col-md-4  mt-5 mx-1 card bg-primary text-dark" *ngFor="let item of contentArray | contentFilter:'outdoor and indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-list>
+    </div>
