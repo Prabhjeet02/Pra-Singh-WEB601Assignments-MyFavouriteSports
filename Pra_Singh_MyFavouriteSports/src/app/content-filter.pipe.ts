@@ -11,9 +11,9 @@ export class ContentFilterPipe implements PipeTransform {
       return contentArray;
     } 
     else {
-      return contentArray.filter((player)=> 
+      return contentArray.filter((content)=> 
       { 
-        return player.type?.toLowerCase() === type?.toLowerCase()
+        return content.type?.toLowerCase() === type?.toLowerCase()
       });
     }
   }
