@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Content } from './helper-files/content-interface';
 
+
 @Pipe({
   name: 'contentFilter'
 })
@@ -11,9 +12,9 @@ export class ContentFilterPipe implements PipeTransform {
       return contentArray;
     } 
     else {
-      return contentArray.filter((content)=> 
+      return contentArray.filter((player)=> 
       { 
-        return content.type?.toLowerCase() === type?.toLowerCase()
+        return player.type?.toLowerCase() === type?.toLowerCase()
       });
     }
   }
