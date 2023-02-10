@@ -97,7 +97,7 @@ export class ContentCardComponent implements OnInit  {
  contentArray: Content[];
   
  constructor(){
-  
+   
     this.contentArray = [this.contentItem];
     /*  this.contentArray.push(this.contentItem); */
      this.contentArray.push(this.contentItem2);
