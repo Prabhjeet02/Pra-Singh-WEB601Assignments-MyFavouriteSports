@@ -1,4 +1,21 @@
-<div class="container">
+<div class="{{ content.type }}">
+  <h2>{{ content.title }}</h2>
+  <p>{{ content.description }}</p>
+  <img *ngIf="content.imgURL;else defaultImage" class="image" src="{{ content.imgURL }}" (click)="imageText()"/><br>
+  By:<em> {{ content.creator }}</em>
+  <p>
+    <span appHoverAffect highlightType="tag" *ngFor="let tag of content.tags"  >
+      #{{ tag }}
+    </span>
+  </p>
+  <p appHoverAffect highlightType="type" >Type: {{ content.type }}</p>
+</div>
+<ng-template #defaultImage>
+  <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTH7YTA3QTv_fIpICd0iWkHlGTnyskKEUONQ&usqp=CAU" alt="Default image">
+</ng-template>
+
+
+<!-- <div class="container">
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8 mt-5">
@@ -25,4 +42,4 @@
     <div class="row">
       <h2 class="m-5">outdoor and indoor</h2>
       <app-content-list class="col-md-4  mt-5 mx-1 card bg-primary text-dark" *ngFor="let item of contentArray | contentFilter:'outdoor and indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-list>
-    </div>
+    </div> -->

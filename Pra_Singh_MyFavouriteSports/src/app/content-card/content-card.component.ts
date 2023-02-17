@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 /* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 
@@ -9,8 +9,39 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit  {
 
+  @Input() content: Content;
+  constructor() {
+    this.content = {
+    id:1,
+    title:"Football",
+    description:"football is an outdoor game",
+    creator:"Prabhjeet",
+    imgURL:"https://tse4.mm.bing.net/th?id=OIP.PGRMBBL_bdz1Fou6sF4FFgHaFj&pid=Api&P=0",
+    type:"outdoor",
+    tags:["outdoor", "Game"]
+    },
+    {
+    
+    id:2,
+    title:"Basketball",
+    description:"basketball is an indoor game",
+    creator:"Prabhjeet",
+    imgURL:"https://tse1.mm.bing.net/th?id=OIP.rSRri9OwWZadFuTqS9lVUwHaEK&pid=Api&P=0",
+    type:"indoor",
+    tags:["basketball", "Game"]
+
+    };
+}
+ngOnInit(): void {
+
+
+}
+
+imageText() {
+  console.log("Image Url: " + this.content.imgURL + " id:" + this.content.id + " Title:" + this.content.title);
+}
   
-  filteredString:any = '';
+  /* filteredString:any = '';
   searchTerm: string = '';
   message: string = '';
   messageColor: string = '';
@@ -99,7 +130,7 @@ export class ContentCardComponent implements OnInit  {
  constructor(){
    
     this.contentArray = [this.contentItem];
-    /*  this.contentArray.push(this.contentItem); */
+     
      this.contentArray.push(this.contentItem2);
      this.contentArray.push(this.contentItem3);
      this.contentArray.push(this.contentItem4);
@@ -123,12 +154,12 @@ export class ContentCardComponent implements OnInit  {
   }
 
   ngOnInit():void{
-   /*  const card = document.getElementById('footballPlayers');
+    const card = document.getElementById('MyFavouriteSports');
     console.log(card);
     if(card){
-      card.innerHTML += this.myFootballPlayers.printProperties(0);
-      card.innerHTML += this.myFootballPlayers.printProperties(1);
-      card.innerHTML += this.myFootballPlayers.printProperties(2);
-    } */
-  } 
+      card.innerHTML += this.MyFavouriteSports.printProperties(0);
+      card.innerHTML += this.MyFavouriteSports.printProperties(1);
+      card.innerHTML += this.MyFavouriteSports.printProperties(2);
+    } 
+  }  */
 }
