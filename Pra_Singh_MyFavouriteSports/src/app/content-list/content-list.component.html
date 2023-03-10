@@ -1,3 +1,6 @@
+<div *ngFor="let sports of sports" class="shadow">
+  <app-content-card [content]="sports"></app-content-card>
+</div>
 <div class="container">
     <div class="row">
       <div class="col-md-2"></div>
@@ -14,17 +17,17 @@
 
 <div class="row">
 <h2 class="m-5">indoor</h2>
-<app-content-card class="col-md-4  mt-5 mx-1 card bg-success text-white" *ngFor="let item of contentArray | contentFilter:'indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
+<app-content-card class="col-md-4  mt-5 mx-1 card bg-success text-white" *ngFor="let item of content | contentFilter:'indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
 </div>
 
 <div class="row">
 <h2 class="m-5">outdoor</h2>
-<app-content-card class="col-md-4  mt-5 mx-1 card bg-dark text-light" *ngFor="let item of contentArray | contentFilter:'outdoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
+<app-content-card class="col-md-4  mt-5 mx-1 card bg-dark text-light" *ngFor="let item of content | contentFilter:'outdoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
 </div>
 
 <div class="row">
 <h2 class="m-5">outdoor and indoor</h2>
-<app-content-card class="col-md-4  mt-5 mx-1 card bg-primary text-dark" *ngFor="let item of contentArray | contentFilter:'outdoor and indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
+<app-content-card class="col-md-4  mt-5 mx-1 card bg-primary text-dark" *ngFor="let item of content | contentFilter:'outdoor and indoor'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
 </div>
 
 
