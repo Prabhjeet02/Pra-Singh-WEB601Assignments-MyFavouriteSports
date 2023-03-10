@@ -11,7 +11,7 @@ import { SportsserviceService } from '../sportsservice.service';
 export class ContentListComponent implements OnInit {
 
   @Input() content:Content[];
-  @Input() sports:Content[];
+  @Input() sport:Content[];
   @Input('ngModel')title: string;
   name= "Prabhjeet Singh";
 
@@ -100,11 +100,11 @@ export class ContentListComponent implements OnInit {
 
   /* contentArray: Content[];
   */
-   constructor(private playerservice: SportsserviceService){
+   constructor(private sportsservice: SportsserviceService){
 
     this.title = '';
     this.content = [];
-    this.sports = [];
+    this.sport = [];
     } 
 
    search() {
@@ -121,8 +121,8 @@ export class ContentListComponent implements OnInit {
    }
    ngOnInit(){
 
-    this.sportsservice.getSports().subscribe(content=> this.content = content);
-    this.sportsservice.getSpecificSports(1).subscribe((sports: Content[]) => this.sports = sports);
+    this.sportsservice.getFavouriteSports().subscribe(content=> this.content = content);
+    this.sportsservice.getSpecificSport(1).subscribe((sport: Content[]) => this.sport = sport);
   } 
 
   addNewContent(newContent:any){

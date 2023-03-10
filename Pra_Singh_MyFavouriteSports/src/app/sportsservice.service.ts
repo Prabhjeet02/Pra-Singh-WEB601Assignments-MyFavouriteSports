@@ -12,22 +12,22 @@ export class SportsserviceService {
   getcontentCardArrayLength: any;
   constructor(private messageservice: MessageService) { }
   
-  getSports(): Observable<Content[]> {
+  getFavouriteSports(): Observable<Content[]> {
     const sports = of(CONTENT)
     this.messageservice.add('content array loaded!');
     return sports;
   }
-  getSpecificSports(id : number): Observable<Content[]>{
-    const sports = CONTENT.filter(obj=>obj.id == id);
+  getSpecificSport(id : number): Observable<Content[]>{
+    const sport = CONTENT.filter(obj=>obj.id == id);
     this.messageservice.add('Content item at :' + id )
-    return of(sports)
+    return of(sport)
   }
 
 
-  getClickedSportsCard(idNum:number){
-    const sports = CONTENT.filter(obj => obj.id == idNum);
-    this.messageservice.add("Sports Card Retrieved at id" + idNum)
-    return of(sports)
+  getClickedSportCard(playerId:number){
+    const Clickedsport = CONTENT.filter(obj => obj.id == playerId);
+    this.messageservice.add("Sports Card Retrieved at id" + playerId)
+    return of(Clickedsport)
   }
 
  
